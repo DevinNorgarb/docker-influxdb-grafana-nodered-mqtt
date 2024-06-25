@@ -13,6 +13,7 @@ services:
     user: "0:0"
     networks:
       - mynetwork
+      - sharednetwork
 
   telegraf:
     image: telegraf
@@ -24,6 +25,7 @@ services:
       - influxdb-2
     networks:
       - mynetwork
+      - sharednetwork
     extra_hosts:
       - 'host.docker.internal:host-gateway'
 
@@ -36,6 +38,7 @@ services:
       - ./influxdb-2/data:/var/lib/influxdb2
     networks:
       - mynetwork
+      - sharednetwork
     ports:
       - "8086:8086"
 
@@ -51,6 +54,7 @@ services:
       - INFLUXDB_ADMIN_PASSWORD=password
     networks:
       - mynetwork
+      - sharednetwork
 
   grafana:
     image: grafana/grafana
@@ -68,6 +72,7 @@ services:
       - ./grafana/config:/etc/grafana
     networks:
       - mynetwork
+      - sharednetwork
     ports:
       - "3000:3000"
 
@@ -80,6 +85,7 @@ services:
       - ./node-red/data/:/data
     networks:
       - mynetwork
+      - sharednetwork
 
   chronograf:
     image: chronograf:latest
@@ -95,6 +101,7 @@ services:
       - INFLUXDB_PASSWORD=password
     networks:
       - mynetwork
+      - sharednetwork
 
 volumes:
   influxdb:
@@ -103,4 +110,6 @@ volumes:
 
 networks:
   mynetwork:
+    driver: bridge
+  sharednetwork:
     driver: bridge
