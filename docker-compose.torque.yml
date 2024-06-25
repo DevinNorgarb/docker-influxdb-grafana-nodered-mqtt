@@ -2,7 +2,6 @@ version: "3"
 
 services:
 
-
   mqtt-broker:
     image: eclipse-mosquitto
     ports:
@@ -11,7 +10,9 @@ services:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
-    user:  "0:0"
+    user: "0:0"
+    networks:
+      - mynetwork
 
   telegraf:
     image: telegraf
@@ -21,12 +22,10 @@ services:
     depends_on:
       - mqtt-broker
       - influxdb
-    links:
-      - influxdb
-      - influxdb-2
     extra_hosts:
       - 'host.docker.internal:host-gateway'
-
+    networks:
+      - mynetwork
 
   influxdb-2:
     image: influxdb:2.6-alpine
@@ -35,35 +34,25 @@ services:
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     volumes:
-      # Mount for influxdb data directory and configuration
       - ./influxdb-2/config/influxdb.conf:/etc/influxdb/influxdb.conf
       - ./influxdb-2/data:/var/lib/influxdb2
     network_mode: host
-#    ports:
-#      - "8086:8086"
-#    links:
- #     - grafana
- #     - influxdb
 
   influxdb:
     platform: linux/amd64
     restart: always
     image: influxdb:1.8
-#    image: influxdb
-#    ports:
-#      - "8087:8086"
     volumes:
- #     - ./influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
       - ./influxdb/data/:/var/lib/influxdb
     environment:
       - INFLUXDB_DB=mydatabase
       - INFLUXDB_ADMIN_USER=admin
       - INFLUXDB_ADMIN_PASSWORD=password
-
+    networks:
+      - mynetwork
 
   grafana:
     image: grafana/grafana
-    network_mode: host
     depends_on:
       - influxdb
     user: "0"
@@ -75,9 +64,8 @@ services:
       - GF_FEATURE_TOGGLES_ENABLE=externalServiceAccounts
     volumes:
       - ./grafana:/var/lib/grafana
-#      - ./grafana/custom.ini:/etc/grafana/grafana.ini
       - ./grafana/config:/etc/grafana
-
+    network_mode: host
 
   node-red:
     image: nodered/node-red
@@ -86,6 +74,8 @@ services:
       - "11711:11711/udp"
     volumes:
       - ./node-red/data/:/data
+    networks:
+      - mynetwork
 
   chronograf:
     image: chronograf:latest
@@ -99,8 +89,14 @@ services:
       - INFLUXDB_URL=http://influxdb:8086
       - INFLUXDB_USERNAME=admin
       - INFLUXDB_PASSWORD=password
+    networks:
+      - mynetwork
 
 volumes:
   influxdb:
   grafana:
   chronograf-storage:
+
+networks:
+  mynetwork:
+    driver: bridge
