@@ -1,0 +1,44 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.7.0
+2 info using node@v20.14.0
+3 silly config:load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config:load:file:/data/.npmrc
+5 silly config:load:file:/usr/src/node-red/.npmrc
+6 silly config:load:file:/usr/local/etc/npmrc
+7 verbose title npm install @wz2b/node-red-influxdb-line-protocol@0.2.0
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "@wz2b/node-red-influxdb-line-protocol@0.2.0"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2024-06-23T12_49_06_374Z-
+10 verbose logfile /data/.npm/_logs/2024-06-23T12_49_06_374Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest @wz2b/node-red-influxdb-line-protocol@0.2.0
+15 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+16 http fetch GET 200 https://registry.npmjs.org/@wz2b%2fnode-red-influxdb-line-protocol 92ms (cache hit)
+17 silly placeDep ROOT @wz2b/node-red-influxdb-line-protocol@0.2.0 OK for: node-red-project@0.0.1 want: 0.2.0
+18 silly fetch manifest node-red-contrib-influxdb-line-protocol@file:
+19 silly placeDep ROOT node-red-contrib-influxdb-line-protocol@0.2.0 OK for: @wz2b/node-red-influxdb-line-protocol@0.2.0 want: file:
+20 verbose stack Error: Unsupported engine
+20 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/lib/index.js:14:25)
+20 verbose stack     at #checkEngineAndPlatform (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:220:11)
+20 verbose stack     at Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:206:41)
+20 verbose stack     at async Promise.all (index 1)
+20 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:131:5)
+20 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+20 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+21 verbose pkgid node-red-contrib-ccxt-v2@0.2.13
+22 verbose cwd /data
+23 verbose Linux 6.5.0-27-generic
+24 verbose node v20.14.0
+25 verbose npm  v10.7.0
+26 error code EBADENGINE
+27 error engine Unsupported engine
+28 error engine Not compatible with your version of node/npm: node-red-contrib-ccxt-v2@0.2.13
+29 error notsup Not compatible with your version of node/npm: node-red-contrib-ccxt-v2@0.2.13
+29 error notsup Required: {"node":">=14.0.0 <=16"}
+29 error notsup Actual:   {"npm":"10.7.0","node":"v20.14.0"}
+30 verbose exit 1
+31 verbose code 1
+32 silly unfinished npm timer reify 1719146946834
+33 silly unfinished npm timer reify:loadTrees 1719146946843
+34 error A complete log of this run can be found in: /data/.npm/_logs/2024-06-23T12_49_06_374Z-debug-0.log

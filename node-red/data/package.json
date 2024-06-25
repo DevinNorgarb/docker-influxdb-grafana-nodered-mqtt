@@ -1,0 +1,24 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "autana-api-gateway": "~1.0.3",
+        "autana-jsonata-transform": "~2.0.2",
+        "node-red-contrib-ais": "~0.1.1",
+        "node-red-contrib-ais-decoder": "~1.2.5",
+        "node-red-contrib-ccxt-v2": "~0.2.13",
+        "node-red-contrib-ccxt-v3": "~0.2.17",
+        "node-red-contrib-influxdb": "~0.7.0",
+        "node-red-contrib-json-logic": "~2.0.1",
+        "node-red-contrib-json-multi-schema": "~1.6.1",
+        "node-red-contrib-json-schema": "~0.0.1",
+        "node-red-contrib-moment": "~4.0.0",
+        "node-red-contrib-postgres-multi": "~0.2.0",
+        "node-red-contrib-postgresql": "~0.14.0",
+        "node-red-contrib-stackhero-influxdb-v2": "~1.0.4",
+        "node-red-contrib-stackhero-influxdb-v2-param": "~1.0.4",
+        "node-red-contrib-tgr-jsonata": "~1.0.2"
+    }
+}

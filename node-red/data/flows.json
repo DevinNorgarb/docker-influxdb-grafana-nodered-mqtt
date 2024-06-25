@@ -1,0 +1,3361 @@
+[
+    {
+        "id": "6973825bb3c8012a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1051da59.797066",
+        "type": "tab",
+        "label": "Torque",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fac1c07d44b2ebd2",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bfd65df2ec32787f",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "288dfae84126a129",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "48486279a24ca0b3",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "92da19917c0e0691",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "074f1a0716eb3d26",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f7015a5b70cd1fe6",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f2d92f71a634be26",
+        "type": "tab",
+        "label": "Flow 7",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "56a849d2.194a68",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "mqtt-broker",
+        "port": "1883",
+        "tls": "9f91046e.e850e8",
+        "clientid": "node-red",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9f91046e.e850e8",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "7b738726aeb09f7e",
+        "type": "websocket-listener",
+        "path": "/ws",
+        "wholemsg": "false"
+    },
+    {
+        "id": "c62558b8082a6c2b",
+        "type": "websocket-client",
+        "path": "ws://track-me.devsdev.com/ws",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "1",
+        "subprotocol": ""
+    },
+    {
+        "id": "7fa0b93a7e603d46",
+        "type": "postgresdb",
+        "hostname": "38.242.220.129",
+        "port": "5433",
+        "db": "ais_feed",
+        "ssl": false
+    },
+    {
+        "id": "52bcf1b62a5b66b4",
+        "type": "postgresdb",
+        "hostname": "38.242.220.129",
+        "port": "5433",
+        "db": "ais_feed",
+        "ssl": false
+    },
+    {
+        "id": "6de495f346539fd7",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "38.242.220.129",
+        "hostFieldType": "str",
+        "port": "5433",
+        "portFieldType": "num",
+        "database": "ais_feed",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "ais_feed_user",
+        "userFieldType": "str",
+        "password": "ais_feed_user",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "20ae1e52d1eef983",
+        "type": "postgreSQLConfig",
+        "name": "myuser@timescale:5432/iot",
+        "host": "timescale",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "iot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "myuser",
+        "userFieldType": "str",
+        "password": "???",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "a3cfc38470f0d324",
+        "type": "ccxt-exchange-v3",
+        "exchange": "luno",
+        "name": "luno",
+        "defaultconfig": true,
+        "activeconfig": true,
+        "sandboxmode": false
+    },
+    {
+        "id": "2d69c15b3422d29e",
+        "type": "influxdb",
+        "hostname": "129.151.173.215",
+        "port": "8087",
+        "protocol": "http",
+        "database": "database",
+        "name": "influx oracle",
+        "usetls": false,
+        "tls": "9f91046e.e850e8",
+        "influxdbVersion": "2.0",
+        "url": "http://129.151.173.215:8087",
+        "timeout": "10",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "2f82e1f12fb07be9",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "node-red-ccxt",
+        "name": "Influx v2 ",
+        "usetls": false,
+        "tls": "9f91046e.e850e8",
+        "influxdbVersion": "2.0",
+        "url": "http://10.11.0.6:8086",
+        "timeout": "10",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "77dc32f7ea73692a",
+        "type": "ccxt-exchange-v3",
+        "exchange": "bybit",
+        "name": "Bybit",
+        "defaultconfig": true,
+        "activeconfig": true,
+        "sandboxmode": false
+    },
+    {
+        "id": "e64ea852f9a560c5",
+        "type": "ccxt-exchange-v3",
+        "exchange": "binance",
+        "name": "Binance",
+        "defaultconfig": true,
+        "activeconfig": true,
+        "sandboxmode": false
+    },
+    {
+        "id": "cc0e9b61d690a7e8",
+        "type": "udp in",
+        "z": "6973825bb3c8012a",
+        "name": "MarineTraffic In",
+        "iface": "",
+        "port": "11711",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "f17746145c206894",
+                "ed19f166bbf65a3a"
+            ]
+        ]
+    },
+    {
+        "id": "f17746145c206894",
+        "type": "udp out",
+        "z": "6973825bb3c8012a",
+        "name": "",
+        "addr": "144.76.105.244",
+        "iface": "",
+        "port": "3415",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 750,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ed19f166bbf65a3a",
+        "type": "debug",
+        "z": "6973825bb3c8012a",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d676305871d8c274",
+        "type": "ais",
+        "z": "6973825bb3c8012a",
+        "name": "",
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "4a7be660.8e7c6"
+            ]
+        ]
+    },
+    {
+        "id": "4a7be660.8e7c6",
+        "type": "function",
+        "z": "6973825bb3c8012a",
+        "name": "Extract AIS Data",
+        "func": "var mmsi = msg.payload.mmsi;\nvar navigationStatus = msg.payload.navigationStatus;\nvar rateOfTurn = msg.payload.rateOfTurn;\nvar speedOverGround = msg.payload.speedOverGround;\nvar longitude = msg.payload.longitude;\nvar latitude = msg.payload.latitude;\nvar courseOverGround = msg.payload.courseOverGround;\nvar trueHeading = msg.payload.trueHeading;\nvar timeStampSeconds = msg.payload.timeStampSeconds;\nvar isoDate = msg.payload.isoDate;\n\n// Prepare SQL query\nmsg.topic = \"INSERT INTO ais_data (vessel_id, navigation_status, rate_of_turn, speed_over_ground, longitude, latitude, course_over_ground, true_heading, timestamp) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)\";\nmsg.payload = [mmsi, navigationStatus, rateOfTurn, speedOverGround, longitude, latitude, courseOverGround, trueHeading, isoDate];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 580,
+        "wires": [
+            [
+                "ed19f166bbf65a3a"
+            ]
+        ]
+    },
+    {
+        "id": "36d7a2e7.38e4de",
+        "type": "inject",
+        "z": "6973825bb3c8012a",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 160,
+        "wires": [
+            [
+                "1b00f74dc3098005"
+            ]
+        ]
+    },
+    {
+        "id": "ee38d447.1c13a8",
+        "type": "debug",
+        "z": "6973825bb3c8012a",
+        "name": "Done",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "complete",
+        "statusType": "msg",
+        "x": 1750,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "12f229bfef5ad2a5",
+        "type": "function",
+        "z": "6973825bb3c8012a",
+        "name": "Ready for next lines",
+        "func": "return [\n    msg.complete || msg.abort ? msg : null,\n    { tick: true },\n];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 100,
+        "wires": [
+            [
+                "ee38d447.1c13a8"
+            ],
+            [
+                "1b00f74dc3098005"
+            ]
+        ]
+    },
+    {
+        "id": "178252a8d3c54b16",
+        "type": "function",
+        "z": "6973825bb3c8012a",
+        "name": "",
+        "func": "let payload = `(0, FALSE),`;\nif (msg.payload && msg.payload.length > 0) {\n    for (const line of msg.payload) {\n        const valid = 'TRUE'; // Call some kind of test\n        payload += `(${line['id']}, ${valid}),`;\n    }\n}\nmsg.payload = payload.slice(0, - 1);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 160,
+        "wires": [
+            [
+                "6d2073ec4db26f2f"
+            ]
+        ]
+    },
+    {
+        "id": "4fd30ba36702842a",
+        "type": "debug",
+        "z": "6973825bb3c8012a",
+        "name": "Progress",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "parts.index",
+        "statusType": "msg",
+        "x": 1480,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1b00f74dc3098005",
+        "type": "postgresql",
+        "z": "6973825bb3c8012a",
+        "name": "SELECT many",
+        "query": "SELECT * FROM mytable\nORDER BY id ASC\nLIMIT 2000;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": true,
+        "rowsPerMsg": "100",
+        "outputs": 1,
+        "x": 920,
+        "y": 160,
+        "wires": [
+            [
+                "178252a8d3c54b16"
+            ]
+        ]
+    },
+    {
+        "id": "6d2073ec4db26f2f",
+        "type": "postgresql",
+        "z": "6973825bb3c8012a",
+        "name": "UPDATE many",
+        "query": "UPDATE mytable AS c\nSET validity = v.validity\nFROM (VALUES\n\t{{{ msg.payload }}}\n) AS v (id, validity)\nWHERE v.id = c.id;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 1280,
+        "y": 160,
+        "wires": [
+            [
+                "12f229bfef5ad2a5",
+                "4fd30ba36702842a"
+            ]
+        ]
+    },
+    {
+        "id": "64a657de3954a4b5",
+        "type": "debug",
+        "z": "6973825bb3c8012a",
+        "name": "Results",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "pgsql.rowCount",
+        "statusType": "msg",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "adf069475c5e0ba3",
+        "type": "postgresql",
+        "z": "6973825bb3c8012a",
+        "name": "SELECT",
+        "query": "SELECT * FROM mytable\nWHERE id < 100;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 900,
+        "y": 240,
+        "wires": [
+            [
+                "64a657de3954a4b5"
+            ]
+        ]
+    },
+    {
+        "id": "3134bfc0f12e13c3",
+        "type": "inject",
+        "z": "6973825bb3c8012a",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 240,
+        "wires": [
+            [
+                "adf069475c5e0ba3"
+            ]
+        ]
+    },
+    {
+        "id": "d04c65ee97e3a273",
+        "type": "inject",
+        "z": "6973825bb3c8012a",
+        "name": "Prepare",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 720,
+        "y": 60,
+        "wires": [
+            [
+                "82b7c689d6682f72"
+            ]
+        ]
+    },
+    {
+        "id": "c5f0b4b2442e3137",
+        "type": "debug",
+        "z": "6973825bb3c8012a",
+        "name": "Done",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "pgsql",
+        "statusType": "msg",
+        "x": 1090,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "82b7c689d6682f72",
+        "type": "postgresql",
+        "z": "6973825bb3c8012a",
+        "name": "ADD COLUMN",
+        "query": "ALTER TABLE ais_data\n    DROP COLUMN IF EXISTS validity;\n\nALTER TABLE ais_data\n    ADD COLUMN validity BOOLEAN;\n",
+        "postgreSQLConfig": "6de495f346539fd7",
+        "split": false,
+        "rowsPerMsg": "10",
+        "outputs": 1,
+        "x": 920,
+        "y": 60,
+        "wires": [
+            [
+                "c5f0b4b2442e3137"
+            ]
+        ]
+    },
+    {
+        "id": "db1cd378.e0e3c",
+        "type": "inject",
+        "z": "6973825bb3c8012a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":1}",
+        "payloadType": "json",
+        "x": 1090,
+        "y": 680,
+        "wires": [
+            [
+                "5f5a3a2c.b9f5d"
+            ]
+        ]
+    },
+    {
+        "id": "5f5a3a2c.b9f5d",
+        "type": "function",
+        "z": "6973825bb3c8012a",
+        "name": "Construct Query",
+        "func": "\n\n// Extract relevant fields from the AIS message\nconst { vessel_id, latitude, longitude, timestamp, speed, course, status } = msg.payload;\nconsole.log(msg)\n// Construct the SQL query\n\n\nconsole.log( `\n  INSERT INTO ais_messages (vessel_id, latitude, longitude, timestamp, speed, course, status) \n  VALUES (${vessel_id}, ${latitude}, ${longitude}, ${timestamp}, ${speed}, ${course}, ${status});\n`);\n\nmsg.topic = `\n  INSERT INTO ais_messages (vessel_id, latitude, longitude, timestamp, speed, course, status) \n  VALUES ($1, $2, $3, $4, $5, $6, $7);\n`;\n\n// Set the parameters for the query\nmsg.params = [vessel_id, latitude, longitude, timestamp, speed, course, status];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 580,
+        "wires": [
+            [
+                "d35447c3.9bc33",
+                "1d02f5ee.5de33"
+            ]
+        ]
+    },
+    {
+        "id": "d35447c3.9bc33",
+        "type": "postgres",
+        "z": "6973825bb3c8012a",
+        "postgresdb": "52bcf1b62a5b66b4",
+        "name": "PostgreSQL",
+        "output": true,
+        "outputs": 1,
+        "x": 1500,
+        "y": 680,
+        "wires": [
+            [
+                "1d02f5ee.5de33"
+            ]
+        ]
+    },
+    {
+        "id": "1d02f5ee.5de33",
+        "type": "debug",
+        "z": "6973825bb3c8012a",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1610,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "1703129f77daa5b2",
+        "type": "ais-decoder",
+        "z": "6973825bb3c8012a",
+        "name": "",
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "4a7be660.8e7c6"
+            ]
+        ]
+    },
+    {
+        "id": "6d632dc8.c3b994",
+        "type": "http in",
+        "z": "1051da59.797066",
+        "name": "",
+        "url": "/upload",
+        "method": "get",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "cf272a44.fc08b"
+            ]
+        ]
+    },
+    {
+        "id": "d3c7f0f6.360e",
+        "type": "http response",
+        "z": "1051da59.797066",
+        "name": "http response OK!",
+        "statusCode": "200",
+        "headers": {
+            "OK!": ""
+        },
+        "x": 510,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8b6d2f73.79c94",
+        "type": "json",
+        "z": "1051da59.797066",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "ad29e8dd.74e438",
+                "d70fbc90.23d5c"
+            ]
+        ]
+    },
+    {
+        "id": "ad29e8dd.74e438",
+        "type": "change",
+        "z": "1051da59.797066",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "torque/raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b043ff20.449ac8",
+        "type": "debug",
+        "z": "1051da59.797066",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ffec7c10.fa3d6",
+        "type": "mqtt out",
+        "z": "1051da59.797066",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56a849d2.194a68",
+        "x": 1770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "52b74919.1194b8",
+        "type": "function",
+        "z": "1051da59.797066",
+        "name": "str2num",
+        "func": "msg.payload.time = parseInt(msg.payload.time);\nmsg.payload.MAFR = parseFloat(msg.payload.MAFR);\nmsg.payload.throttlePosManifold = parseFloat(msg.payload.throttlePosManifold);\n//msg.payload.airStatus = parseFloat(msg.payload.airStatus);\nmsg.payload.fuelTrimBank1Sensor1 = parseFloat(msg.payload.fuelTrimBank1Sensor1);\nmsg.payload.fuelTrimBank1Sensor2 = parseFloat(msg.payload.fuelTrimBank1Sensor2);\nmsg.payload.fuelTrimBank1Sensor3 = parseFloat(msg.payload.fuelTrimBank1Sensor3);\nmsg.payload.fuelTrimBank1Sensor4 = parseFloat(msg.payload.fuelTrimBank1Sensor4);\nmsg.payload.fuelTrimBank2Sensor1 = parseFloat(msg.payload.fuelTrimBank2Sensor1);\nmsg.payload.fuelTrimBank2Sensor2 = parseFloat(msg.payload.fuelTrimBank2Sensor2);\nmsg.payload.fuelTrimBank2Sensor3 = parseFloat(msg.payload.fuelTrimBank2Sensor3);\nmsg.payload.fuelTrimBank2Sensor4 = parseFloat(msg.payload.fuelTrimBank2Sensor4);\nmsg.payload.runTime = parseFloat(msg.payload.runTime);\nmsg.payload.distTraveledWithCELLit = parseFloat(msg.payload.distTraveledWithCELLit);\nmsg.payload.fuelRailPressureManifoldVacuumRelative = parseFloat(msg.payload.fuelRailPressureManifoldVacuumRelative);\nmsg.payload.fuelRailPressure = parseFloat(msg.payload.fuelRailPressure);\nmsg.payload.O2SensorEquivalenceRatio1 = parseFloat(msg.payload.O2SensorEquivalenceRatio1);\nmsg.payload.O2SensorEquivalenceRatio2 = parseFloat(msg.payload.O2SensorEquivalenceRatio2);\nmsg.payload.O2SensorEquivalenceRatio3 = parseFloat(msg.payload.O2SensorEquivalenceRatio3);\nmsg.payload.O2SensorEquivalenceRatio4 = parseFloat(msg.payload.O2SensorEquivalenceRatio4);\nmsg.payload.O2SensorEquivalenceRatio5 = parseFloat(msg.payload.O2SensorEquivalenceRatio5);\nmsg.payload.O2SensorEquivalenceRatio6 = parseFloat(msg.payload.O2SensorEquivalenceRatio6);\nmsg.payload.O2SensorEquivalenceRatio7 = parseFloat(msg.payload.O2SensorEquivalenceRatio7);\nmsg.payload.O2SensorEquivalenceRatio8 = parseFloat(msg.payload.O2SensorEquivalenceRatio8);\nmsg.payload.EGRCommanded = parseFloat(msg.payload.EGRCommanded);\nmsg.payload.EGRError = parseFloat(msg.payload.EGRError);\nmsg.payload.fuelLevelFromECU = parseFloat(msg.payload.fuelLevelFromECU);\n//msg.payload.fuelStatus = parseFloat(msg.payload.fuelStatus);\nmsg.payload.distTraveledSinceCodesCleared = parseFloat(msg.payload.distTraveledSinceCodesCleared);\nmsg.payload.evapSysVaporPressure = parseFloat(msg.payload.evapSysVaporPressure);\nmsg.payload.barometerVehicle = parseFloat(msg.payload.barometerVehicle);\nmsg.payload.O2SensorEquivalenceRatioAlternate1 = parseFloat(msg.payload.O2SensorEquivalenceRatioAlternate1);\nmsg.payload.catalystTempBank1Sensor1 = parseFloat(msg.payload.catalystTempBank1Sensor1);\nmsg.payload.catalystTempBank2Sensor1 = parseFloat(msg.payload.catalystTempBank2Sensor1);\nmsg.payload.catalystTempBank1Sensor2 = parseFloat(msg.payload.catalystTempBank1Sensor2);\nmsg.payload.catalystTempBank2Sensor2 = parseFloat(msg.payload.catalystTempBank2Sensor2);\nmsg.payload.engineLoad = parseFloat(msg.payload.engineLoad);\nmsg.payload.voltageControlModule = parseFloat(msg.payload.voltageControlModule);\nmsg.payload.engineLoadAbsolute = parseFloat(msg.payload.engineLoadAbsolute);\nmsg.payload.commandedEquivalenceRatioLambda = parseFloat(msg.payload.commandedEquivalenceRatioLambda);\nmsg.payload.throttlePositionRelative = parseFloat(msg.payload.throttlePositionRelative);\nmsg.payload.ambientAirTemp = parseFloat(msg.payload.ambientAirTemp);\nmsg.payload.throttlePositionAbsoluteB = parseFloat(msg.payload.throttlePositionAbsoluteB);\nmsg.payload.acceleratorPedalPositionD = parseFloat(msg.payload.acceleratorPedalPositionD);\nmsg.payload.acceleratorPedalPositionE = parseFloat(msg.payload.acceleratorPedalPositionE);\nmsg.payload.acceleratorPedalPositionF = parseFloat(msg.payload.acceleratorPedalPositionF);\nmsg.payload.engineCoolantTemp = parseFloat(msg.payload.engineCoolantTemp);\nmsg.payload.acceleratorPedalPositionRelative = parseFloat(msg.payload.acceleratorPedalPositionRelative);\nmsg.payload.ethanolFuelPercent = parseFloat(msg.payload.ethanolFuelPercent);\nmsg.payload.relativeAcceleratorPedalPosition = parseFloat(msg.payload.relativeAcceleratorPedalPosition);\nmsg.payload.hybridBatteryCharge = parseFloat(msg.payload.hybridBatteryCharge);\nmsg.payload.engineOilTemp = parseFloat(msg.payload.engineOilTemp);\nmsg.payload.fuelTrimShortTermbank1 = parseFloat(msg.payload.fuelTrimShortTermbank1);\nmsg.payload.torqueDemanded = parseFloat(msg.payload.torqueDemanded);\nmsg.payload.torqueActual = parseFloat(msg.payload.torqueActual);\nmsg.payload.torqueReference = parseFloat(msg.payload.torqueReference);\nmsg.payload.fuelTrimLongTermBank1 = parseFloat(msg.payload.fuelTrimLongTermBank1);\nmsg.payload.turboPressureControl = parseFloat(msg.payload.turboPressureControl);\nmsg.payload.exhaustPressure = parseFloat(msg.payload.exhaustPressure);\nmsg.payload.chargeAirCoolerTemp = parseFloat(msg.payload.chargeAirCoolerTemp);\nmsg.payload.exhaustGasTempBank1Sensor1 = parseFloat(msg.payload.exhaustGasTempBank1Sensor1);\nmsg.payload.exhaustGasTempBank2Sensor1 = parseFloat(msg.payload.exhaustGasTempBank2Sensor1);\nmsg.payload.DPFPressure = parseFloat(msg.payload.DPFPressure);\nmsg.payload.DPFTemp = parseFloat(msg.payload.DPFTemp);\nmsg.payload.fuelTrimShortTermBank2 = parseFloat(msg.payload.fuelTrimShortTermBank2);\nmsg.payload.NOxPreSCR = parseFloat(msg.payload.NOxPreSCR);\nmsg.payload.fuelTrimLongTermBank2 = parseFloat(msg.payload.fuelTrimLongTermBank2);\nmsg.payload.fuelPressure = parseFloat(msg.payload.fuelPressure);\nmsg.payload.intakeManifoldPressure = parseFloat(msg.payload.intakeManifoldPressure);\nmsg.payload.transmissionTempMethod2 = parseFloat(msg.payload.transmissionTempMethod2);\nmsg.payload.engineRPM = parseFloat(msg.payload.engineRPM);\nmsg.payload.speedOBD = parseFloat(msg.payload.speedOBD);\nmsg.payload.timingAdvance = parseFloat(msg.payload.timingAdvance);\nmsg.payload.intakeAirTemp = parseFloat(msg.payload.intakeAirTemp);\nmsg.payload.transmissionTempMethod1 = parseFloat(msg.payload.transmissionTempMethod1);\nmsg.payload.GPSSpeed = parseFloat(msg.payload.GPSSpeed);\nmsg.payload.GPSLongitude = parseFloat(msg.payload.GPSLongitude);\nmsg.payload.GPSLatitude = parseFloat(msg.payload.GPSLatitude);\nmsg.payload.GPSBearing1 = parseFloat(msg.payload.GPSBearing1);\nmsg.payload.GPSAltitude = parseFloat(msg.payload.GPSAltitude);\nmsg.payload.MPGInstant = parseFloat(msg.payload.MPGInstant);\nmsg.payload.turboBoostandVac = parseFloat(msg.payload.turboBoostandVac);\nmsg.payload.KPLInstant = parseFloat(msg.payload.KPLInstant);\nmsg.payload.tripDistance = parseFloat(msg.payload.tripDistance);\nmsg.payload.MPGtripAvg = parseFloat(msg.payload.MPGtripAvg);\nmsg.payload.KPLtripAvg = parseFloat(msg.payload.KPLtripAvg);\nmsg.payload.LP100KMInstant = parseFloat(msg.payload.LP100KMInstant);\nmsg.payload.LP100KMtripAvg = parseFloat(msg.payload.LP100KMtripAvg);\nmsg.payload.tripDistanceVehicleProfile = parseFloat(msg.payload.tripDistanceVehicleProfile);\nmsg.payload.O2VoltsBank1Sensor1 = parseFloat(msg.payload.O2VoltsBank1Sensor1);\nmsg.payload.O2VoltsBank1Sensor2 = parseFloat(msg.payload.O2VoltsBank1Sensor2);\nmsg.payload.O2VoltsBank1Sensor3 = parseFloat(msg.payload.O2VoltsBank1Sensor3);\nmsg.payload.O2VoltsBank1Sensor4 = parseFloat(msg.payload.O2VoltsBank1Sensor4);\nmsg.payload.O2VoltsBank2Sensor1 = parseFloat(msg.payload.O2VoltsBank2Sensor1);\nmsg.payload.O2VoltsBank2Sensor2 = parseFloat(msg.payload.O2VoltsBank2Sensor2);\nmsg.payload.O2VoltsBank2Sensor3 = parseFloat(msg.payload.O2VoltsBank2Sensor3);\nmsg.payload.O2VoltsBank2Sensor4 = parseFloat(msg.payload.O2VoltsBank2Sensor4);\nmsg.payload.accelerationX = parseFloat(msg.payload.accelerationX);\nmsg.payload.accelerationY = parseFloat(msg.payload.accelerationY);\nmsg.payload.accelerationZ = parseFloat(msg.payload.accelerationZ);\nmsg.payload.accelerationTot = parseFloat(msg.payload.accelerationTot);\nmsg.payload.torqueCalculated = parseFloat(msg.payload.torqueCalculated);\nmsg.payload.horsepowerWheels = parseFloat(msg.payload.horsepowerWheels);\nmsg.payload.timerFrom0to60mph = parseFloat(msg.payload.timerFrom0to60mph);\nmsg.payload.timerFrom0to100kph = parseFloat(msg.payload.timerFrom0to100kph);\nmsg.payload.timerQuarterMile = parseFloat(msg.payload.timerQuarterMile);\nmsg.payload.timerEighthMile = parseFloat(msg.payload.timerEighthMile);\nmsg.payload.GPSvsOBDSpeedDiff = parseFloat(msg.payload.GPSvsOBDSpeedDiff);\nmsg.payload.voltageOBDAdapter = parseFloat(msg.payload.voltageOBDAdapter);\nmsg.payload.GPSAccuracy = parseFloat(msg.payload.GPSAccuracy);\nmsg.payload.GPSSatellites = parseFloat(msg.payload.GPSSatellites);\nmsg.payload.GPSBearing2 = parseFloat(msg.payload.GPSBearing2);\nmsg.payload.O2VoltsWideRangeSensor1 = parseFloat(msg.payload.O2VoltsWideRangeSensor1);\nmsg.payload.O2VoltsWideRangeSensor2 = parseFloat(msg.payload.O2VoltsWideRangeSensor2);\nmsg.payload.O2VoltsWideRangeSensor3 = parseFloat(msg.payload.O2VoltsWideRangeSensor3);\nmsg.payload.O2VoltsWideRangeSensor4 = parseFloat(msg.payload.O2VoltsWideRangeSensor4);\nmsg.payload.O2VoltsWideRangeSensor5 = parseFloat(msg.payload.O2VoltsWideRangeSensor5);\nmsg.payload.O2VoltsWideRangeSensor6 = parseFloat(msg.payload.O2VoltsWideRangeSensor6);\nmsg.payload.O2VoltsWideRangeSensor7 = parseFloat(msg.payload.O2VoltsWideRangeSensor7);\nmsg.payload.O2VoltsWideRangeSensor8 = parseFloat(msg.payload.O2VoltsWideRangeSensor8);\nmsg.payload.airFuelRatioMeasured = parseFloat(msg.payload.airFuelRatioMeasured);\nmsg.payload.tiltX = parseFloat(msg.payload.tiltX);\nmsg.payload.tiltY = parseFloat(msg.payload.tiltY);\nmsg.payload.tiltZ = parseFloat(msg.payload.tiltZ);\nmsg.payload.airFuelRatioCommanded = parseFloat(msg.payload.airFuelRatioCommanded);\nmsg.payload.timerFrom0to200kph = parseFloat(msg.payload.timerFrom0to200kph);\nmsg.payload.CO2Instant = parseFloat(msg.payload.CO2Instant);\nmsg.payload.CO2Avg = parseFloat(msg.payload.CO2Avg);\nmsg.payload.fuelFlowRatePerMin = parseFloat(msg.payload.fuelFlowRatePerMin);\nmsg.payload.fuelCostTrip = parseFloat(msg.payload.fuelCostTrip);\nmsg.payload.fuelFlowRatePerHour = parseFloat(msg.payload.fuelFlowRatePerHour);\nmsg.payload.timerFrom60to120mph = parseFloat(msg.payload.timerFrom60to120mph);\nmsg.payload.timerFrom60to80mph = parseFloat(msg.payload.timerFrom60to80mph);\nmsg.payload.timerFrom40to60mph = parseFloat(msg.payload.timerFrom40to60mph);\nmsg.payload.timerFrom80to100mph = parseFloat(msg.payload.timerFrom80to100mph);\nmsg.payload.tripSpeedAvgWhileMoving = parseFloat(msg.payload.tripSpeedAvgWhileMoving);\nmsg.payload.timerFrom100to0kph = parseFloat(msg.payload.timerFrom100to0kph);\nmsg.payload.timerFrom60to0mph = parseFloat(msg.payload.timerFrom60to0mph);\nmsg.payload.timerSinceJourneyStart = parseFloat(msg.payload.timerSinceJourneyStart);\nmsg.payload.timerStationary = parseFloat(msg.payload.timerStationary);\nmsg.payload.timerMoving = parseFloat(msg.payload.timerMoving);\nmsg.payload.volumetricEfficiencyCalculated = parseFloat(msg.payload.volumetricEfficiencyCalculated);\nmsg.payload.distanceToEmptyCalculated = parseFloat(msg.payload.distanceToEmptyCalculated);\nmsg.payload.fuelRemainingCalculated = parseFloat(msg.payload.fuelRemainingCalculated);\nmsg.payload.costPerMileInstant = parseFloat(msg.payload.costPerMileInstant);\nmsg.payload.costPerMileTrip = parseFloat(msg.payload.costPerMileTrip);\nmsg.payload.barometerAndroid = parseFloat(msg.payload.barometerAndroid);\nmsg.payload.fuelUsedTrip = parseFloat(msg.payload.fuelUsedTrip);\nmsg.payload.tripSpeedAvg = parseFloat(msg.payload.tripSpeedAvg);\nmsg.payload.enginekWWheels = parseFloat(msg.payload.enginekWWheels);\nmsg.payload.timerFrom80to120kph = parseFloat(msg.payload.timerFrom80to120kph);\nmsg.payload.timerFrom60to130mph = parseFloat(msg.payload.timerFrom60to130mph);\nmsg.payload.timerFrom0to30mph = parseFloat(msg.payload.timerFrom0to30mph);\nmsg.payload.exhaustGasTempBank1Sensor2 = parseFloat(msg.payload.exhaustGasTempBank1Sensor2);\nmsg.payload.exhaustGasTempBank1Sensor3 = parseFloat(msg.payload.exhaustGasTempBank1Sensor3);\nmsg.payload.exhaustGasTempBank1Sensor4 = parseFloat(msg.payload.exhaustGasTempBank1Sensor4);\nmsg.payload.exhaustGasTempBank2Sensor2 = parseFloat(msg.payload.exhaustGasTempBank2Sensor2);\nmsg.payload.exhaustGasTempBank2Sensor3 = parseFloat(msg.payload.exhaustGasTempBank2Sensor3);\nmsg.payload.exhaustGasTempBank2Sensor4 = parseFloat(msg.payload.exhaustGasTempBank2Sensor4);\nmsg.payload.NOxPostSCR = parseFloat(msg.payload.NOxPostSCR);\nmsg.payload.drivingPercentCity = parseFloat(msg.payload.drivingPercentCity);\nmsg.payload.drivingPercentHighway = parseFloat(msg.payload.drivingPercentHighway);\nmsg.payload.drivingPercentIdle = parseFloat(msg.payload.drivingPercentIdle);\nmsg.payload.batteryLevelAndroid = parseFloat(msg.payload.batteryLevelAndroid);\nmsg.payload.MPGLongTermAvg = parseFloat(msg.payload.MPGLongTermAvg);\nmsg.payload.KPLLongTermAvg = parseFloat(msg.payload.KPLLongTermAvg);\nmsg.payload.LP100KMLongTermAvg = parseFloat(msg.payload.LP100KMLongTermAvg);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 260,
+        "wires": [
+            [
+                "f8b64b5e.e7ce"
+            ]
+        ]
+    },
+    {
+        "id": "3c83039.65050fc",
+        "type": "debug",
+        "z": "1051da59.797066",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1570,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "84b76083.62f398",
+        "type": "inject",
+        "z": "1051da59.797066",
+        "name": "testdata",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"eml\":\"torquetest\",\"v\":\"8\",\"session\":\"1559309451755\",\"id\":\"282d443464cf7afc0051c57afba43006\",\"time\":\"1559313070844\",\"kff1005\":[\"-71.089996\",\"-71.089996\"],\"kff1006\":[\"42.362714\",\"42.362714\"],\"kff1001\":[\"0.0\",\"0.0\"],\"kff1007\":\"0.0\",\"k47\":\"24.313726\",\"kff1223\":\"0.01545088\",\"kff1220\":\"-0.022440217\",\"kff1221\":\"8.1349094E-4\",\"kff1222\":\"0.91485566\",\"kff124d\":\"14.08\",\"k46\":\"27.0\",\"kff129a\":\"79.0\",\"kff1272\":\"0.0\",\"kff1270\":\"1012.35156\",\"k33\":\"104.0\",\"k3c\":\"28.699997\",\"k3d\":\"28.699997\",\"k44\":\"1.0\",\"k2c\":\"0.0\",\"k2d\":\"0.0\",\"k5\":\"29.0\",\"k4\":\"0.0\",\"k43\":\"0.0\",\"kc\":\"0.0\",\"k32\":\"-34.25\",\"k2f\":\"100.0\",\"k22\":\"100.625\",\"kff1239\":\"51.456\",\"kff1010\":\"-100.840087890625\",\"kff123b\":\"0.0\",\"kff123a\":\"2.0\",\"kff1237\":\"0.0\",\"kf\":\"40.0\",\"kb\":\"104.0\",\"k10\":\"0.0\",\"kff1201\":\"512.0\",\"k45\":\"5.882353\",\"k1f\":\"0.0\",\"kd\":\"0.0\",\"k11\":\"18.431374\",\"ke\":\"10.0\",\"kff1205\":\"0.0\",\"kff1202\":\"0.0\",\"k42\":\"12.109\",\"kff1238\":\"12.4\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "8b6d2f73.79c94"
+            ]
+        ]
+    },
+    {
+        "id": "19625f35.0e6039",
+        "type": "moment",
+        "z": "1051da59.797066",
+        "name": "",
+        "topic": "",
+        "input": "payload.session",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "LLL",
+        "locale": "POSIX",
+        "output": "payload.session",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1280,
+        "y": 260,
+        "wires": [
+            [
+                "3c87de8f.38df52",
+                "3c83039.65050fc"
+            ]
+        ]
+    },
+    {
+        "id": "d70fbc90.23d5c",
+        "type": "change",
+        "z": "1051da59.797066",
+        "name": "Rename PIDs",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.k10",
+                "pt": "msg",
+                "to": "payload.MAFR",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k11",
+                "pt": "msg",
+                "to": "payload.throttlePosManifold",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k12",
+                "pt": "msg",
+                "to": "payload.airStatus",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k14",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank1Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k15",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank1Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k16",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank1Sensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k17",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank1Sensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k18",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank2Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k19",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank2Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1a",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank2Sensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1b",
+                "pt": "msg",
+                "to": "payload.fuelTrimBank2Sensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1f",
+                "pt": "msg",
+                "to": "payload.runTime",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k21",
+                "pt": "msg",
+                "to": "payload.distTraveledWithCELLit",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k22",
+                "pt": "msg",
+                "to": "payload.fuelRailPressureManifoldVacuumRelative",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k23",
+                "pt": "msg",
+                "to": "payload.fuelRailPressure",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k24",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k25",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k26",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k27",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k28",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio5",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k29",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio6",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k2a",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio7",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k2b",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatio8",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k2c",
+                "pt": "msg",
+                "to": "payload.EGRCommanded",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k2d",
+                "pt": "msg",
+                "to": "payload.EGRError",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k2f",
+                "pt": "msg",
+                "to": "payload.fuelLevelFromECU",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k3",
+                "pt": "msg",
+                "to": "payload.fuelStatus",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k31",
+                "pt": "msg",
+                "to": "payload.distTraveledSinceCodesCleared",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k32",
+                "pt": "msg",
+                "to": "payload.evapSysVaporPressure",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k33",
+                "pt": "msg",
+                "to": "payload.barometerVehicle",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k34",
+                "pt": "msg",
+                "to": "payload.O2SensorEquivalenceRatioAlternate1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k3c",
+                "pt": "msg",
+                "to": "payload.catalystTempBank1Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k3d",
+                "pt": "msg",
+                "to": "payload.catalystTempBank2Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k3e",
+                "pt": "msg",
+                "to": "payload.catalystTempBank1Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k3f",
+                "pt": "msg",
+                "to": "payload.catalystTempBank2Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k4",
+                "pt": "msg",
+                "to": "payload.engineLoad",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k42",
+                "pt": "msg",
+                "to": "payload.voltageControlModule",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k43",
+                "pt": "msg",
+                "to": "payload.engineLoadAbsolute",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k44",
+                "pt": "msg",
+                "to": "payload.commandedEquivalenceRatioLambda",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k45",
+                "pt": "msg",
+                "to": "payload.throttlePositionRelative",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k46",
+                "pt": "msg",
+                "to": "payload.ambientAirTemp",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k47",
+                "pt": "msg",
+                "to": "payload.throttlePositionAbsoluteB",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k49",
+                "pt": "msg",
+                "to": "payload.acceleratorPedalPositionD",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k4a",
+                "pt": "msg",
+                "to": "payload.acceleratorPedalPositionE",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k4b",
+                "pt": "msg",
+                "to": "payload.acceleratorPedalPositionF",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k5",
+                "pt": "msg",
+                "to": "payload.engineCoolantTemp",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k5a",
+                "pt": "msg",
+                "to": "payload.acceleratorPedalPositionRelative",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k52",
+                "pt": "msg",
+                "to": "payload.ethanolFuelPercent",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k5a",
+                "pt": "msg",
+                "to": "payload.relativeAcceleratorPedalPosition",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k5b",
+                "pt": "msg",
+                "to": "payload.hybridBatteryCharge",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k5c",
+                "pt": "msg",
+                "to": "payload.engineOilTemp",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k6",
+                "pt": "msg",
+                "to": "payload.fuelTrimShortTermbank1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k61",
+                "pt": "msg",
+                "to": "payload.torqueDemanded",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k62",
+                "pt": "msg",
+                "to": "payload.torqueActual",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k63",
+                "pt": "msg",
+                "to": "payload.torqueReference",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k7",
+                "pt": "msg",
+                "to": "payload.fuelTrimLongTermBank1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k70",
+                "pt": "msg",
+                "to": "payload.turboPressureControl",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k73",
+                "pt": "msg",
+                "to": "payload.exhaustPressure",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k77",
+                "pt": "msg",
+                "to": "payload.chargeAirCoolerTemp",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k78",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank1Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k79",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank2Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k7a",
+                "pt": "msg",
+                "to": "payload.DPFPressure",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k7c",
+                "pt": "msg",
+                "to": "payload.DPFTemp",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k8",
+                "pt": "msg",
+                "to": "payload.fuelTrimShortTermBank2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k83",
+                "pt": "msg",
+                "to": "payload.NOxPreSCR",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k9",
+                "pt": "msg",
+                "to": "payload.fuelTrimLongTermBank2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.ka",
+                "pt": "msg",
+                "to": "payload.fuelPressure",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kb",
+                "pt": "msg",
+                "to": "payload.intakeManifoldPressure",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kb4",
+                "pt": "msg",
+                "to": "payload.transmissionTempMethod2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kc",
+                "pt": "msg",
+                "to": "payload.engineRPM",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kd",
+                "pt": "msg",
+                "to": "payload.speedOBD",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.ke",
+                "pt": "msg",
+                "to": "payload.timingAdvance",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kf",
+                "pt": "msg",
+                "to": "payload.intakeAirTemp",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kfe1805",
+                "pt": "msg",
+                "to": "payload.transmissionTempMethod1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1001",
+                "pt": "msg",
+                "to": "payload.GPSSpeed",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1005",
+                "pt": "msg",
+                "to": "payload.GPSLongitude",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1006",
+                "pt": "msg",
+                "to": "payload.GPSLatitude",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1007",
+                "pt": "msg",
+                "to": "payload.GPSBearing1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1010",
+                "pt": "msg",
+                "to": "payload.GPSAltitude",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1201",
+                "pt": "msg",
+                "to": "payload.MPGInstant",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1202",
+                "pt": "msg",
+                "to": "payload.turboBoostandVac",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1203",
+                "pt": "msg",
+                "to": "payload.KPLInstant",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1204",
+                "pt": "msg",
+                "to": "payload.tripDistance",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1205",
+                "pt": "msg",
+                "to": "payload.MPGtripAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1206",
+                "pt": "msg",
+                "to": "payload.KPLtripAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1207",
+                "pt": "msg",
+                "to": "payload.LP100KMInstant",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1208",
+                "pt": "msg",
+                "to": "payload.LP100KMtripAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff120c",
+                "pt": "msg",
+                "to": "payload.tripDistanceVehicleProfile",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1214",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank1Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1215",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank1Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1216",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank1Sensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1217",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank1Sensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1218",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank2Sensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1219",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank2Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff121a",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank2Sensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff121b",
+                "pt": "msg",
+                "to": "payload.O2VoltsBank2Sensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1220",
+                "pt": "msg",
+                "to": "payload.accelerationX",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1221",
+                "pt": "msg",
+                "to": "payload.accelerationY",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1222",
+                "pt": "msg",
+                "to": "payload.accelerationZ",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1223",
+                "pt": "msg",
+                "to": "payload.accelerationTot",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1225",
+                "pt": "msg",
+                "to": "payload.torqueCalculated",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1226",
+                "pt": "msg",
+                "to": "payload.horsepowerWheels",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff122d",
+                "pt": "msg",
+                "to": "payload.timerFrom0to60mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff122e",
+                "pt": "msg",
+                "to": "payload.timerFrom0to100kph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff122f",
+                "pt": "msg",
+                "to": "payload.timerQuarterMile",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1230",
+                "pt": "msg",
+                "to": "payload.timerEighthMile",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1237",
+                "pt": "msg",
+                "to": "payload.GPSvsOBDSpeedDiff",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1238",
+                "pt": "msg",
+                "to": "payload.voltageOBDAdapter",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1239",
+                "pt": "msg",
+                "to": "payload.GPSAccuracy",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff123a",
+                "pt": "msg",
+                "to": "payload.GPSSatellites",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff123b",
+                "pt": "msg",
+                "to": "payload.GPSBearing2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1240",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor1",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1241",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1242",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1243",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1244",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor5",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1245",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor6",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1246",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor7",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1247",
+                "pt": "msg",
+                "to": "payload.O2VoltsWideRangeSensor8",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1249",
+                "pt": "msg",
+                "to": "payload.airFuelRatioMeasured",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff124a",
+                "pt": "msg",
+                "to": "payload.tiltX",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff124b",
+                "pt": "msg",
+                "to": "payload.tiltY",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff124c",
+                "pt": "msg",
+                "to": "payload.tiltZ",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff124d",
+                "pt": "msg",
+                "to": "payload.airFuelRatioCommanded",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff124f",
+                "pt": "msg",
+                "to": "payload.timerFrom0to200kph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1257",
+                "pt": "msg",
+                "to": "payload.CO2Instant",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1258",
+                "pt": "msg",
+                "to": "payload.CO2Avg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff125a",
+                "pt": "msg",
+                "to": "payload.fuelFlowRatePerMin",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff125c",
+                "pt": "msg",
+                "to": "payload.fuelCostTrip",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff125d",
+                "pt": "msg",
+                "to": "payload.fuelFlowRatePerHour",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff125e",
+                "pt": "msg",
+                "to": "payload.timerFrom60to120mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff125f",
+                "pt": "msg",
+                "to": "payload.timerFrom60to80mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1260",
+                "pt": "msg",
+                "to": "payload.timerFrom40to60mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1261",
+                "pt": "msg",
+                "to": "payload.timerFrom80to100mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1263",
+                "pt": "msg",
+                "to": "payload.tripSpeedAvgWhileMoving",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1264",
+                "pt": "msg",
+                "to": "payload.timerFrom100to0kph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1265",
+                "pt": "msg",
+                "to": "payload.timerFrom60to0mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1266",
+                "pt": "msg",
+                "to": "payload.timerSinceJourneyStart",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1267",
+                "pt": "msg",
+                "to": "payload.timerStationary",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1268",
+                "pt": "msg",
+                "to": "payload.timerMoving",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1269",
+                "pt": "msg",
+                "to": "payload.volumetricEfficiencyCalculated",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff126a",
+                "pt": "msg",
+                "to": "payload.distanceToEmptyCalculated",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff126b",
+                "pt": "msg",
+                "to": "payload.fuelRemainingCalculated",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff126d",
+                "pt": "msg",
+                "to": "payload.costPerMileInstant",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff126e",
+                "pt": "msg",
+                "to": "payload.costPerMileTrip",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1270",
+                "pt": "msg",
+                "to": "payload.barometerAndroid",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1271",
+                "pt": "msg",
+                "to": "payload.fuelUsedTrip",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1272",
+                "pt": "msg",
+                "to": "payload.tripSpeedAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1273",
+                "pt": "msg",
+                "to": "payload.enginekWWheels",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1275",
+                "pt": "msg",
+                "to": "payload.timerFrom80to120kph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1276",
+                "pt": "msg",
+                "to": "payload.timerFrom60to130mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff1277",
+                "pt": "msg",
+                "to": "payload.timerFrom0to30mph",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1282",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank1Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1283",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank1Sensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1284",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank1Sensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1286",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank2Sensor2",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1287",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank2Sensor3",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1288",
+                "pt": "msg",
+                "to": "payload.exhaustGasTempBank2Sensor4",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k128a",
+                "pt": "msg",
+                "to": "payload.NOxPostSCR",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1296",
+                "pt": "msg",
+                "to": "payload.drivingPercentCity",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1297",
+                "pt": "msg",
+                "to": "payload.drivingPercentHighway",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.k1298",
+                "pt": "msg",
+                "to": "payload.drivingPercentIdle",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff129a",
+                "pt": "msg",
+                "to": "payload.batteryLevelAndroid",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff5201",
+                "pt": "msg",
+                "to": "payload.MPGLongTermAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff5202",
+                "pt": "msg",
+                "to": "payload.KPLLongTermAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.kff5203",
+                "pt": "msg",
+                "to": "payload.LP100KMLongTermAvg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.v",
+                "pt": "msg",
+                "to": "payload.appVersion",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.id",
+                "pt": "msg",
+                "to": "payload.appID_MD5",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.eml",
+                "pt": "msg",
+                "to": "payload.appID_userEntered",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "861b3377.410e3"
+            ]
+        ]
+    },
+    {
+        "id": "3c87de8f.38df52",
+        "type": "change",
+        "z": "1051da59.797066",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "torque/formatted",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1500,
+        "y": 120,
+        "wires": [
+            [
+                "ffec7c10.fa3d6",
+                "b3a1c03a5c7fc32c"
+            ]
+        ]
+    },
+    {
+        "id": "f8b64b5e.e7ce",
+        "type": "function",
+        "z": "1051da59.797066",
+        "name": "remove nulls",
+        "func": "//Object.keys(msg.payload).forEach((k) => (!msg.payload[k] && msg.payload[k] !== undefined) && delete msg.payload[k]);\n\n\nfor (var propName in msg.payload)\n{ \n    if (msg.payload[propName] === null || msg.payload[propName] === undefined || (isNaN(msg.payload[propName] && typeof msg.payload[propName] !== 'string')))\n    {\n      delete msg.payload[propName];\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1090,
+        "y": 260,
+        "wires": [
+            [
+                "19625f35.0e6039"
+            ]
+        ]
+    },
+    {
+        "id": "cf272a44.fc08b",
+        "type": "delay",
+        "z": "1051da59.797066",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "100",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "d3c7f0f6.360e",
+                "b043ff20.449ac8",
+                "8b6d2f73.79c94"
+            ]
+        ]
+    },
+    {
+        "id": "861b3377.410e3",
+        "type": "function",
+        "z": "1051da59.797066",
+        "name": "set default ID",
+        "func": "if (msg.payload.appID_userEntered === undefined)\n{\n   msg.payload.appID_userEntered = 'liteVersion'; \n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "52b74919.1194b8"
+            ]
+        ]
+    },
+    {
+        "id": "e48e04a6383975e7",
+        "type": "websocket out",
+        "z": "1051da59.797066",
+        "name": "Socket Out",
+        "server": "",
+        "client": "c62558b8082a6c2b",
+        "x": 1810,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b3a1c03a5c7fc32c",
+        "type": "http request",
+        "z": "1051da59.797066",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "http://track-me.devsdev.com/api/rides/1/coordinates",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1730,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88ca164bb0f84b56",
+        "type": "http in",
+        "z": "fac1c07d44b2ebd2",
+        "name": "/webhook-slack",
+        "url": "/webhook",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "b0e8e7d6aa0caa02",
+                "ba168f183408b268"
+            ]
+        ]
+    },
+    {
+        "id": "b46102a61ff759d8",
+        "type": "debug",
+        "z": "fac1c07d44b2ebd2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b0e8e7d6aa0caa02",
+        "type": "http response",
+        "z": "fac1c07d44b2ebd2",
+        "name": "response",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json",
+            "OK": ""
+        },
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cd9c6e1f9e7450b0",
+        "type": "json-multi-schema-resolver",
+        "z": "fac1c07d44b2ebd2",
+        "name": "",
+        "mappingsUrl": "",
+        "x": 500,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba168f183408b268",
+        "type": "function",
+        "z": "fac1c07d44b2ebd2",
+        "name": "function 1",
+        "func": "// Input message containing the nested JSON\nvar msg = msg.payload;\n\n// Flatten the nested JSON structure\nvar flatten = function(data, prefix = '') {\n    let result = {};\n    for (let key in data) {\n        if (typeof data[key] === 'object' && data[key] !== null && !Array.isArray(data[key])) {\n            Object.assign(result, flatten(data[key], prefix + key + '_'));\n        } else {\n            result[prefix + key] = data[key];\n        }\n    }\n    return result;\n};\n\n// Call the flatten function and update the payload\nmsg.payload = flatten(msg);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "434e98c422e651fd",
+                "b46102a61ff759d8"
+            ]
+        ]
+    },
+    {
+        "id": "434e98c422e651fd",
+        "type": "http request",
+        "z": "fac1c07d44b2ebd2",
+        "name": "slack",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://hooks.slack.com/triggers/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",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 850,
+        "y": 380,
+        "wires": [
+            [
+                "b46102a61ff759d8"
+            ]
+        ]
+    },
+    {
+        "id": "59ff2a1.fa600d4",
+        "type": "http in",
+        "z": "bfd65df2ec32787f",
+        "name": "",
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "54c1e70d.ab3e18"
+            ]
+        ]
+    },
+    {
+        "id": "54c1e70d.ab3e18",
+        "type": "template",
+        "z": "bfd65df2ec32787f",
+        "name": "page",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <head></head>\n    <body>\n        <h1>Hello World!</h1>\n    </body>\n</html>",
+        "x": 690,
+        "y": 300,
+        "wires": [
+            [
+                "266c286f.d993d8"
+            ]
+        ]
+    },
+    {
+        "id": "266c286f.d993d8",
+        "type": "http response",
+        "z": "bfd65df2ec32787f",
+        "name": "",
+        "x": 830,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6af5806b0d8c20fa",
+        "type": "ccxt-api-v3",
+        "z": "288dfae84126a129",
+        "name": "luno : get_balance",
+        "exchange": [
+            "luno"
+        ],
+        "allexchanges": false,
+        "apitype": "customAPI",
+        "customapitype": "private",
+        "api": "private_get_balance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "a3cfc38470f0d324",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "36bc5bd3b2ce4148"
+            ]
+        ]
+    },
+    {
+        "id": "1799770c8fd00f36",
+        "type": "debug",
+        "z": "288dfae84126a129",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e4d70564af306d5e",
+        "type": "inject",
+        "z": "288dfae84126a129",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "6af5806b0d8c20fa",
+                "0abf478b8e8a2da2",
+                "5630b464808ffb89"
+            ]
+        ]
+    },
+    {
+        "id": "b084562cf09bdd03",
+        "type": "influxdb out",
+        "z": "288dfae84126a129",
+        "influxdb": "2f82e1f12fb07be9",
+        "name": "Write to InfluxDB",
+        "measurement": "wallets",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "devsdev",
+        "bucket": "ccxt",
+        "x": 1270,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "36bc5bd3b2ce4148",
+        "type": "function",
+        "z": "288dfae84126a129",
+        "name": "function 2",
+        "func": "console.log(msg.payload.payload)\nreturn msg.payload;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 480,
+        "wires": [
+            [
+                "b084562cf09bdd03",
+                "1799770c8fd00f36"
+            ]
+        ]
+    },
+    {
+        "id": "b20e95fd6651fb9e",
+        "type": "ccxt-api-v3",
+        "z": "288dfae84126a129",
+        "name": "luno : get_balance",
+        "exchange": [
+            "luno"
+        ],
+        "allexchanges": false,
+        "apitype": "customAPI",
+        "customapitype": "private",
+        "api": "private_get_balance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "a3cfc38470f0d324",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 350,
+        "y": 920,
+        "wires": [
+            [
+                "a5306e2f51614d21"
+            ]
+        ]
+    },
+    {
+        "id": "5ea3a7d27946a8be",
+        "type": "debug",
+        "z": "288dfae84126a129",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "45693fb2de1c16f8",
+        "type": "inject",
+        "z": "288dfae84126a129",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "b20e95fd6651fb9e"
+            ]
+        ]
+    },
+    {
+        "id": "a5306e2f51614d21",
+        "type": "function",
+        "z": "288dfae84126a129",
+        "name": "Preprocess Data",
+        "func": "var balanceData = msg.payload.payload.balance;\nvar points = [];\n\nbalanceData.forEach(function(entry) {\n    var point = {\n        measurement: 'wallets',\n        fields: {\n            balance: parseFloat(entry.balance),\n            reserved: parseFloat(entry.reserved),\n            unconfirmed: parseFloat(entry.unconfirmed)\n        },\n        tags: {\n            account_id: entry.account_id,\n            asset: entry.asset\n        },\n        time: new Date().toISOString()\n    };\n    points.push(point);\n});\n\nmsg.payload = {\n    data: points\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1020,
+        "wires": [
+            [
+                "f88821891d3e9cd9",
+                "5ea3a7d27946a8be"
+            ]
+        ]
+    },
+    {
+        "id": "f88821891d3e9cd9",
+        "type": "influxdb out",
+        "z": "288dfae84126a129",
+        "influxdb": "2f82e1f12fb07be9",
+        "name": "Write to InfluxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "devsdev",
+        "bucket": "ccxt",
+        "x": 1030,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "0abf478b8e8a2da2",
+        "type": "ccxt-api-v3",
+        "z": "288dfae84126a129",
+        "name": "bybit : get_balance",
+        "exchange": [
+            "bybit"
+        ],
+        "allexchanges": false,
+        "apitype": "unifiedAPI",
+        "customapitype": "private",
+        "api": "fetchBalance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "77dc32f7ea73692a",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "36bc5bd3b2ce4148"
+            ]
+        ]
+    },
+    {
+        "id": "5630b464808ffb89",
+        "type": "ccxt-api-v3",
+        "z": "288dfae84126a129",
+        "name": "Binance : get_balance",
+        "exchange": [
+            "binance"
+        ],
+        "allexchanges": false,
+        "apitype": "unifiedAPI",
+        "customapitype": "private",
+        "api": "fetchBalance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "e64ea852f9a560c5",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "36bc5bd3b2ce4148"
+            ]
+        ]
+    },
+    {
+        "id": "37bb47bc73190f59",
+        "type": "http in",
+        "z": "48486279a24ca0b3",
+        "name": "",
+        "url": "/pickup_points/:cc/:lat/:lng",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "8fb81d4f78f00c8f",
+                "bb7de81d2a1f0c35"
+            ]
+        ]
+    },
+    {
+        "id": "54434b9124891087",
+        "type": "http response",
+        "z": "48486279a24ca0b3",
+        "name": "pup",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 930,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8fb81d4f78f00c8f",
+        "type": "function",
+        "z": "48486279a24ca0b3",
+        "name": "function 3",
+        "func": "msg.payload = JSON.stringify([\n    {\n        \"name\": \"Legit - Campus Square JHB\",\n        \"reference\": \"pup6070\",\n        \"address1\": \"Legit Shop 62 Campus Square Shopping Cnt\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"country\": \"ZA\",\n        \"province\": \"Gauteng\",\n        \"suburb\": \"Auckland Park\",\n        \"city\": \"Johannesburg\",\n        \"postalCode\": \"2092\",\n        \"coordinates\": {\n            \"lng\": 28.00368144,\n            \"lat\": -26.18208771\n        },\n        \"openingHours\":{\"friday\":[[\"08:00\",\"17:00\"]],\"monday\":[[\"08:00\",\"17:00\"]],\"tuesday\":[[\"08:00\",\"17:00\"]],\"saturday\":[[\"08:00\",\"14:00\"]],\"thursday\":[[\"08:00\",\"17:00\"]],\"wednesday\":[[\"08:00\",\"17:00\"]]}\n    },{\n        \"name\": \"Noordwes Med Pharmacy  Koster\",\n        \"address1\": \"Legit Shop 62 Campus Square Shopping Cnt\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup205\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        },\n        \"openingHours\":{\"friday\":[[\"08:00\",\"17:00\"]],\"monday\":[[\"08:00\",\"17:00\"]],\"tuesday\":[[\"08:00\",\"17:00\"]],\"saturday\":[[\"08:00\",\"14:00\"]],\"thursday\":[[\"08:00\",\"17:00\"]],\"wednesday\":[[\"08:00\",\"17:00\"]]}\n         \n         },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        }\n                 },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        },\n                 },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        },\n                 },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        },\n                 },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        },\n                 },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        },\n                 },{\n        \"name\": \"Test Devin workshop\",\n        \"address1\": \"109 Beach Road\",\n        \"address2\":\"Kingsway and University Rd\",\n        \"reference\": \"pup1992\",\n        \"country\": \"ZA\",\n        \"province\": \"North West\",\n        \"suburb\": \"Koster\",\n        \"city\": \"Koster\",\n        \"postalCode\": \"0348\",\n        \"coordinates\": {\n            \"lng\": 26.899148,\n            \"lat\": -25.869676\n        }\n    }])\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 600,
+        "wires": [
+            [
+                "bb7de81d2a1f0c35",
+                "54434b9124891087"
+            ]
+        ]
+    },
+    {
+        "id": "47a6309b0ff3167e",
+        "type": "inject",
+        "z": "48486279a24ca0b3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 600,
+        "wires": [
+            [
+                "8fb81d4f78f00c8f"
+            ]
+        ]
+    },
+    {
+        "id": "bb7de81d2a1f0c35",
+        "type": "debug",
+        "z": "48486279a24ca0b3",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f22bfec0910b191c",
+        "type": "inject",
+        "z": "92da19917c0e0691",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "13f4c51d952f8879",
+                "adf14b60879cc74e",
+                "3bb2e9d96bd5202d"
+            ]
+        ]
+    },
+    {
+        "id": "13f4c51d952f8879",
+        "type": "ccxt-api-v3",
+        "z": "92da19917c0e0691",
+        "name": "luno : get_balance",
+        "exchange": [
+            "luno"
+        ],
+        "allexchanges": false,
+        "apitype": "customAPI",
+        "customapitype": "private",
+        "api": "private_get_balance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "a3cfc38470f0d324",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "f7803b61c45ad988"
+            ]
+        ]
+    },
+    {
+        "id": "adf14b60879cc74e",
+        "type": "ccxt-api-v3",
+        "z": "92da19917c0e0691",
+        "name": "bybit : get_balance",
+        "exchange": [
+            "bybit"
+        ],
+        "allexchanges": false,
+        "apitype": "unifiedAPI",
+        "customapitype": "private",
+        "api": "fetchBalance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "77dc32f7ea73692a",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "f7803b61c45ad988"
+            ]
+        ]
+    },
+    {
+        "id": "3bb2e9d96bd5202d",
+        "type": "ccxt-api-v3",
+        "z": "92da19917c0e0691",
+        "name": "Binance : get_balance",
+        "exchange": [
+            "binance"
+        ],
+        "allexchanges": false,
+        "apitype": "unifiedAPI",
+        "customapitype": "private",
+        "api": "fetchBalance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "e64ea852f9a560c5",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "f7803b61c45ad988"
+            ]
+        ]
+    },
+    {
+        "id": "f7803b61c45ad988",
+        "type": "function",
+        "z": "92da19917c0e0691",
+        "name": "Preprocess Data",
+        "func": "var balanceData = msg.payload.payload.balance;\nvar points = [];\n\n// Check if balanceData is an array\nif (Array.isArray(balanceData)) {\n    balanceData.forEach(function (entry) {\n        // Convert the balance entry to the required format for InfluxDB\n        var point = {\n            measurement: 'wallets',\n            fields: {\n                balance: parseFloat(entry.balance || 0),\n                reserved: parseFloat(entry.reserved || 0),\n                unconfirmed: parseFloat(entry.unconfirmed || 0)\n            },\n            tags: {\n                account_id: entry.account_id || '',\n                asset: entry.asset || ''\n            },\n            timestamp: new Date().toISOString() // Use timestamp instead of time\n        };\n        points.push(point);\n    });\n\n    msg.payload = points;\n} else {\n    // Handle case where balanceData is not an array\n    msg.payload = [];\n    node.warn(\"balanceData is not an array\");\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 480,
+        "wires": [
+            [
+                "681937ac8322e74f",
+                "942f23ee7c9a65a4"
+            ]
+        ]
+    },
+    {
+        "id": "681937ac8322e74f",
+        "type": "influxdb out",
+        "z": "92da19917c0e0691",
+        "influxdb": "2f82e1f12fb07be9",
+        "name": "Write to InfluxDB",
+        "measurement": "wallets",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "devsdev",
+        "bucket": "ccxt",
+        "x": 1270,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "942f23ee7c9a65a4",
+        "type": "debug",
+        "z": "92da19917c0e0691",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3ea29a9f0c78d524",
+        "type": "ccxt-api-v3",
+        "z": "92da19917c0e0691",
+        "name": "luno : get_balance",
+        "exchange": [
+            "luno"
+        ],
+        "allexchanges": false,
+        "apitype": "customAPI",
+        "customapitype": "private",
+        "api": "private_get_balance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "a3cfc38470f0d324",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 350,
+        "y": 920,
+        "wires": [
+            [
+                "22999109d43d6632"
+            ]
+        ]
+    },
+    {
+        "id": "82dffd7d196a9235",
+        "type": "debug",
+        "z": "92da19917c0e0691",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "22999109d43d6632",
+        "type": "function",
+        "z": "92da19917c0e0691",
+        "name": "Preprocess Data",
+        "func": "var balanceData = msg.payload.payload.balance;\nvar points = [];\n\nbalanceData.forEach(function(entry) {\n    var point = {\n        measurement: 'wallets',\n        fields: {\n            balance: parseFloat(entry.balance),\n            reserved: parseFloat(entry.reserved),\n            unconfirmed: parseFloat(entry.unconfirmed)\n        },\n        tags: {\n            account_id: entry.account_id,\n            asset: entry.asset\n        },\n        time: new Date().toISOString()\n    };\n    points.push(point);\n});\n\nmsg.payload = points;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1020,
+        "wires": [
+            [
+                "e1bf9236d49b8092",
+                "82dffd7d196a9235"
+            ]
+        ]
+    },
+    {
+        "id": "e1bf9236d49b8092",
+        "type": "influxdb out",
+        "z": "92da19917c0e0691",
+        "influxdb": "2f82e1f12fb07be9",
+        "name": "Write to InfluxDB",
+        "measurement": "wallets",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "devsdev",
+        "bucket": "ccxt",
+        "x": 1030,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4e9b37cb6dc11781",
+        "type": "inject",
+        "z": "f7015a5b70cd1fe6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "de56f978284dd591",
+                "3672494b3be52cea",
+                "eea1b8e4f6265d42"
+            ]
+        ]
+    },
+    {
+        "id": "de56f978284dd591",
+        "type": "ccxt-api-v3",
+        "z": "f7015a5b70cd1fe6",
+        "name": "luno : get_balance",
+        "exchange": [
+            "luno"
+        ],
+        "allexchanges": false,
+        "apitype": "customAPI",
+        "customapitype": "private",
+        "api": "private_get_balance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "a3cfc38470f0d324",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "a76ef355b36ebe4e"
+            ]
+        ]
+    },
+    {
+        "id": "3672494b3be52cea",
+        "type": "ccxt-api-v3",
+        "z": "f7015a5b70cd1fe6",
+        "name": "bybit : get_balance",
+        "exchange": [
+            "bybit"
+        ],
+        "allexchanges": false,
+        "apitype": "unifiedAPI",
+        "customapitype": "private",
+        "api": "fetchBalance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "77dc32f7ea73692a",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "a76ef355b36ebe4e"
+            ]
+        ]
+    },
+    {
+        "id": "eea1b8e4f6265d42",
+        "type": "ccxt-api-v3",
+        "z": "f7015a5b70cd1fe6",
+        "name": "Binance : get_balance",
+        "exchange": [
+            "binance"
+        ],
+        "allexchanges": false,
+        "apitype": "unifiedAPI",
+        "customapitype": "private",
+        "api": "fetchBalance",
+        "apiprivate": "true",
+        "filtermarkets": "",
+        "filtermarketsType": "str",
+        "symbol": "",
+        "symbolType": "str",
+        "limit": "",
+        "limitType": "num",
+        "since": "",
+        "sinceType": "datepick",
+        "timeframe": "1m",
+        "timeframeType": "timeframeList",
+        "ordertype": "limit",
+        "orderside": "buy",
+        "amount": "",
+        "amountType": "num",
+        "orderprice": "",
+        "orderpriceType": "num",
+        "orderid": "",
+        "orderidType": "str",
+        "code": "",
+        "address": "",
+        "tag": "",
+        "apisecrets": "e64ea852f9a560c5",
+        "apipayload": "",
+        "apipayloadType": "none",
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "a76ef355b36ebe4e"
+            ]
+        ]
+    },
+    {
+        "id": "a76ef355b36ebe4e",
+        "type": "function",
+        "z": "f7015a5b70cd1fe6",
+        "name": "Preprocess Data",
+        "func": "var balanceData = msg.payload.payload.balance;\nvar points = [];\n\nif (Array.isArray(balanceData) && balanceData.length > 0) {\n    balanceData.forEach(function (entry) {\n        // Convert the balance entry to the required format for InfluxDB\n        var point = {\n            measurement: 'wallets',\n            tags: {\n                account_id: entry.account_id || '',\n                asset: entry.asset || ''\n            },\n            fields: {\n                balance: parseFloat(entry.balance || 0),\n                reserved: parseFloat(entry.reserved || 0),\n                unconfirmed: parseFloat(entry.unconfirmed || 0)\n            },\n            timestamp: Date.now() // Use current timestamp if applicable, adjust as needed\n        };\n        points.push(point);\n    });\n\n    // Prepare the final payload for InfluxDB write node\n    msg.payload = {\n        bucket: 'ccxt', // Replace with your bucket name\n        precision: 's', // Set precision to 's' for seconds, adjust as needed\n        data: points\n    };\n} else {\n    // Handle case where balanceData is not an array or is empty\n    msg.payload = {\n        bucket: 'ccxt', // Replace with your bucket name\n        precision: 's', // Set precision to 's' for seconds, adjust as needed\n        data: [] // Empty array if no data to send\n    };\n    node.warn(\"balanceData is not an array or is empty\");\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 480,
+        "wires": [
+            [
+                "2cc53c17b9a13f86",
+                "cd54359e227c537b"
+            ]
+        ]
+    },
+    {
+        "id": "2cc53c17b9a13f86",
+        "type": "influxdb out",
+        "z": "f7015a5b70cd1fe6",
+        "influxdb": "2f82e1f12fb07be9",
+        "name": "Write to InfluxDB",
+        "measurement": "wallets",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "devsdev",
+        "bucket": "ccxt",
+        "x": 1210,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "cd54359e227c537b",
+        "type": "debug",
+        "z": "f7015a5b70cd1fe6",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 420,
+        "wires": []
+    }
+]
