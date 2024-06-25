@@ -24,6 +24,7 @@ services:
       - influxdb
     extra_hosts:
       - 'host.docker.internal:host-gateway'
+      - 'host_ip:10.11.0.6'  # Add your host IP here
     networks:
       - mynetwork
 
