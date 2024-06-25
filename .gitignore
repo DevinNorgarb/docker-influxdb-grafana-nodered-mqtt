@@ -1,3 +1,5 @@
 /backups/*
 /influxdb/data
-/grafana/grafana.db
+/grafana/*
+#grafana.db
+/mosquitto/data/*
