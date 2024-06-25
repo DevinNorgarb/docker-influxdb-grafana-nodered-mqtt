@@ -3,3 +3,4 @@
 /grafana/*
 #grafana.db
 /mosquitto/data/*
+/mosquitto/log/*
