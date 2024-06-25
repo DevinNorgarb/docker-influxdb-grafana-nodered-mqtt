@@ -21,23 +21,23 @@ services:
       - ./telegraf/data:/var/lib/telegraf
     depends_on:
       - mqtt-broker
-      - influxdb
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'
-      - 'host_ip:10.11.0.6'  # Add your host IP here
+      - influxdb-2
     networks:
       - mynetwork
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
 
   influxdb-2:
     image: influxdb:2.6-alpine
     env_file:
       - influxv2.env
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'
     volumes:
       - ./influxdb-2/config/influxdb.conf:/etc/influxdb/influxdb.conf
       - ./influxdb-2/data:/var/lib/influxdb2
-    network_mode: host
+    networks:
+      - mynetwork
+    ports:
+      - "8086:8086"
 
   influxdb:
     platform: linux/amd64
@@ -55,7 +55,7 @@ services:
   grafana:
     image: grafana/grafana
     depends_on:
-      - influxdb
+      - influxdb-2
     user: "0"
     env_file:
       - 'grafana.env'
@@ -66,7 +66,10 @@ services:
     volumes:
       - ./grafana:/var/lib/grafana
       - ./grafana/config:/etc/grafana
-    network_mode: host
+    networks:
+      - mynetwork
+    ports:
+      - "3000:3000"
 
   node-red:
     image: nodered/node-red
